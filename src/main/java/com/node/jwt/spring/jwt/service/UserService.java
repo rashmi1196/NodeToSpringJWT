@@ -1,14 +1,12 @@
-package com.movie.jwt.spring.movieJwtSpring.service;
+package com.node.jwt.spring.jwt.service;
 
-import com.movie.jwt.spring.movieJwtSpring.model.User;
-import com.movie.jwt.spring.movieJwtSpring.repository.UserRepository;
+import com.node.jwt.spring.jwt.model.User;
+import com.node.jwt.spring.jwt.repository.UserRepository;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
-import java.util.Map;
 import java.util.Optional;
 
 @Service

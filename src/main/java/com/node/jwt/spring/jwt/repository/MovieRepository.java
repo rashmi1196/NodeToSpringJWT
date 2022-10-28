@@ -1,6 +1,6 @@
-package com.movie.jwt.spring.movieJwtSpring.repository;
+package com.node.jwt.spring.jwt.repository;
 
-import com.movie.jwt.spring.movieJwtSpring.model.Movie;
+import com.node.jwt.spring.jwt.model.Movie;
 import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;

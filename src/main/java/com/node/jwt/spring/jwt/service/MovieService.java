@@ -1,7 +1,7 @@
-package com.movie.jwt.spring.movieJwtSpring.service;
+package com.node.jwt.spring.jwt.service;
 
-import com.movie.jwt.spring.movieJwtSpring.model.Movie;
-import com.movie.jwt.spring.movieJwtSpring.repository.MovieRepository;
+import com.node.jwt.spring.jwt.model.Movie;
+import com.node.jwt.spring.jwt.repository.MovieRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

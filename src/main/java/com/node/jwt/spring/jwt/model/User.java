@@ -1,4 +1,4 @@
-package com.movie.jwt.spring.movieJwtSpring.model;
+package com.node.jwt.spring.jwt.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;

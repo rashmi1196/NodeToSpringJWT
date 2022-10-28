@@ -1,7 +1,7 @@
-package com.movie.jwt.spring.movieJwtSpring.controller;
+package com.node.jwt.spring.jwt.controller;
 
-import com.movie.jwt.spring.movieJwtSpring.model.User;
-import com.movie.jwt.spring.movieJwtSpring.service.UserService;
+import com.node.jwt.spring.jwt.model.User;
+import com.node.jwt.spring.jwt.service.UserService;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

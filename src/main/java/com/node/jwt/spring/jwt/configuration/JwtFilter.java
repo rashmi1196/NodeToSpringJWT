@@ -1,6 +1,6 @@
-package com.movie.jwt.spring.movieJwtSpring.configuration;
+package com.node.jwt.spring.jwt.configuration;
 
-import com.movie.jwt.spring.movieJwtSpring.service.TokenService;
+import com.node.jwt.spring.jwt.service.TokenService;
 import org.bson.types.ObjectId;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.filter.GenericFilterBean;
@@ -33,7 +33,7 @@ public class JwtFilter extends GenericFilterBean {
 
         String token = httpServletRequest.getHeader("Authorization");
         if("OPTIONS".equalsIgnoreCase(httpServletRequest.getMethod())) {
-            httpServletResponse.sendError(HttpServletResponse.SC_OK, "success");
+            httpServletResponse.sendError(HttpServletResponse.SC_OK, "Success");
             return;
         }
         if(allowRequestWithoutToken(httpServletRequest)){

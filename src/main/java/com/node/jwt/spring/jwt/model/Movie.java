@@ -1,13 +1,10 @@
-package com.movie.jwt.spring.movieJwtSpring.model;
+package com.node.jwt.spring.jwt.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.bson.types.ObjectId;
-
-import java.util.Date;
 
 
 @Data

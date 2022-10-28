@@ -1,12 +1,11 @@
-package com.movie.jwt.spring.movieJwtSpring.controller;
+package com.node.jwt.spring.jwt.controller;
 
 
-import com.movie.jwt.spring.movieJwtSpring.model.Movie;
-import com.movie.jwt.spring.movieJwtSpring.service.MovieService;
+import com.node.jwt.spring.jwt.model.Movie;
+import com.node.jwt.spring.jwt.service.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 @RestController

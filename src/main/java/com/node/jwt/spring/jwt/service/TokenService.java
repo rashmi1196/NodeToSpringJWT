@@ -1,4 +1,4 @@
-package com.movie.jwt.spring.movieJwtSpring.service;
+package com.node.jwt.spring.jwt.service;
 
 
 import com.auth0.jwt.JWT;
