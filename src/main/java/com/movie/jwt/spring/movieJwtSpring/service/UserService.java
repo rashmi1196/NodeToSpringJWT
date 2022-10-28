@@ -44,16 +44,23 @@ public class UserService {
     }
 
     public String login(String email, String password){
-        List<User> foundUsers = userRepository.getUsersByEmail(email, password);
+        List<User> foundUsers = userRepository.getUsersByEmail(email);
 
         if(foundUsers.isEmpty()){
-            return "{" +
-                    "\"message\":"+"\"Authenticatin Failed !!!\",\n"+
+            return "{\n" +
+                    "\"message\":"+"\" Authentication Failed !!! (USER NOT FOUND) \",\n"+
                     "}";
         }
-        return "{" +
-                "\"message\":"+"\"Successfully Logged-in\",\n"+
-                "\"data\":"+foundUsers+",\n"+
+
+        else if(!foundUsers.get(0).getPassword().equals(password)){
+            return "{\n" +
+                    "\"message\":"+"\" Password Incorrect !!!\",\n"+
+                    "}";
+        }
+        return "{\n" +
+                "\"message\":"+"\" Successfully Logged-in\",\n"+
+                "\"data\": {\n"+" Name : "+foundUsers.get(0).getName()+",\n"+
+                            "Email : "+foundUsers.get(0).getEmail()+"\n"+
                 "\"token\":\""+tokenService.createToken(foundUsers.get(0).getId())+"\"" +
                 "}";
 
