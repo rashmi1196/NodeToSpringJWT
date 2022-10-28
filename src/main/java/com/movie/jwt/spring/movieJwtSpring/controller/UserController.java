@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/user")
@@ -21,8 +22,13 @@ public class UserController {
     }
 
     @PostMapping(value = "/add-user")
-    public String saveUser(@RequestBody User user){
-        return service.saveUser(user);
+    public String signup(@RequestBody User user){
+        return service.signup(user);
+    }
+
+    @PostMapping("/login")
+    public String login(@RequestBody Map<String, Object> map){
+        return service.login(map.get("email").toString(), map.get("password").toString());
     }
 
     @GetMapping("/get-user")

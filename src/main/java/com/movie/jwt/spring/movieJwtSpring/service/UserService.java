@@ -5,8 +5,10 @@ import com.movie.jwt.spring.movieJwtSpring.repository.UserRepository;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 @Service
@@ -32,22 +34,29 @@ public class UserService {
     }
 
 
-    public String saveUser(User user){
-        /*
-            {
-	            message: “Successfully Created User”,
-	            data: savedUserDocument,
-	            token: secretToken
-            }
-        */
+    public String signup(User user){
 
         User savedUser = userRepository.save(user);
         return "{" +
                 "\"message\":"+"\"Successfully Created User\",\n"+
                 "\"data\":"+savedUser+",\n"+
-
-                "\"token\":\""+tokenService.createToken(savedUser.getId())+"\"" +
                 "}";
+    }
+
+    public String login(String email, String password){
+        List<User> foundUsers = userRepository.getUsersByEmail(email, password);
+
+        if(foundUsers.isEmpty()){
+            return "{" +
+                    "\"message\":"+"\"Authenticatin Failed !!!\",\n"+
+                    "}";
+        }
+        return "{" +
+                "\"message\":"+"\"Successfully Logged-in\",\n"+
+                "\"data\":"+foundUsers+",\n"+
+                "\"token\":\""+tokenService.createToken(foundUsers.get(0).getId())+"\"" +
+                "}";
+
     }
 
 }

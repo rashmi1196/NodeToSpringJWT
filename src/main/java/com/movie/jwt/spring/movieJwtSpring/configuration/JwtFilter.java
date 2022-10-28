@@ -49,7 +49,7 @@ public class JwtFilter extends GenericFilterBean {
 
     public boolean allowRequestWithoutToken(HttpServletRequest httpServletRequest){
         System.out.println(httpServletRequest.getRequestURI());
-        if(httpServletRequest.getRequestURI().contains("/add-user"))
+        if(httpServletRequest.getRequestURI().contains("/user"))
             return true;
 
         return false;
