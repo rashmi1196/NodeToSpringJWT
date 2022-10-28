@@ -17,5 +17,5 @@ import java.util.Date;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Movie {
     private String name;
-    private Date releaseDate;
+    private String releaseDate;
 }
